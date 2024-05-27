@@ -1,0 +1,195 @@
+/* Reset de márgenes y padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Contenedor general */
+.contenedor {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    height: auto;
+}
+
+/* Header y Navegación */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ba7cd4;
+}
+
+/* Imagen principal y texto superpuesto */
+.contenedor2 {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.contenedor2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-superpuesto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 4rem;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Secciones de contenido */
+.sobrelabanda, .historia, .historia2, .sobrenosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.sobrelabanda h1, .historia h1, .historia2 h1 {
+    color: #ba7cd4;
+    margin-bottom: 20px;
+}
+
+.sobrelabanda p, .historia p, .historia2 p, .sobrenosotros p {
+    max-width: 800px;
+    text-align: justify;
+}
+
+/* Contenedor para los integrantes */
+.contenedor1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #222222;
+}
+
+.parte {
+    width: 300px;
+    margin: 20px;
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.parte img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.parte p {
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #111111;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    nav ul li {
+        margin: 0 10px;
+    }
+    .texto-superpuesto {
+        font-size: 3rem;
+    }
+    .parte {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobrelabanda, .historia, .historia2, .sobrenosotros {
+        padding: 20px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .texto-superpuesto {
+        font-size: 2rem;
+    }
+    .parte {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto-superpuesto {
+        font-size: 1.5rem;
+    }
+    .parte {
+        width: 100%;
+    }
+}
+.playlist {
+    padding: 20px;
+    background-color: #222222;
+    color: #ffffff;
+    text-align: center;
+}
+
+.playlist h1 {
+    color: #ba7cd4;
+    margin-bottom: 20px;
+}
+
+/* Media Queries para iframe responsive */
+@media (max-width: 768px) {
+    .playlist iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .playlist iframe {
+        height: 250px;
+    }
+}
